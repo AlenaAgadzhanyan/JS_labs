@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <title>JS-task</title>
+</head>
+<body>
+    <div class="main">
+        <div class="accordion">
+            <input type="checkbox" id="task1" name="tab-group">
+            <label for="task1" class="task_header">Task 1</label>
+            <section class="accordion_content">
+                <div class="num1">
+                    <span id="date"></span><span id="clock"></span>
+                </div>
+                <script>setInterval(num1,1000);</script>
+            </section>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="task2" name="tab-group">
+            <label for="task2" class="task_header">Task 2</label>
+            <section class="accordion_content"></section>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="task3" name="tab-group">
+            <label for="task3" class="task_header">Task 3</label>
+            <section class="accordion_content">
+                <span id="count_img"></span>
+            </section>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="task4" name="tab-group">
+            <label for="task4" class="task_header">Task 4</label>
+            <section class="accordion_content">
+                <div class="block1"></div>
+                <div class="block2"></div>
+                <div class="block3"></div>
+                <div class="block4"></div>
+            </section>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="task5" name="tab-group">
+            <label for="task5" class="task_header">Task 5</label>
+            <section class="accordion_content"> </section>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="task6" name="tab-group">
+            <label for="task6" class="task_header">Task 6</label>
+            <section class="accordion_content"></section>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="task7" name="tab-group">
+            <label for="task7" class="task_header">Task 7</label>
+            <section class="accordion_content"></section>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="task8" name="tab-group">
+            <label for="task8" class="task_header">Task 8</label>
+            <section class="accordion_content"> </section>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="task9" name="tab-group">
+            <label for="task9" class="task_header">Task 9</label>
+            <section class="accordion_content"> </section>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="task10" name="tab-group">
+            <label for="task10" class="task_header">Task 10</label>
+            <section class="accordion_content"></section>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="task11" name="tab-group">
+            <label for="task11" class="task_header">Task 11</label>
+            <section class="accordion_content"></section>
+        </div>
+    </div>
+    <script>
+        num1();
+        num3();
+    </script>
+</body>
+</html>

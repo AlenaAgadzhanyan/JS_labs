@@ -1,0 +1,314 @@
+/*Гармошка (аккордеон)*/
+
+body{
+    background-image: url(./images/fon.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    margin: 7vw 0 0 20vw;
+}
+
+.accordion input, .accordion_content { 
+    display: none; 
+} 
+
+.accordion { 
+    width: 30vw;
+    font: 0.8vw/1.2 Arial, sans-serif; 
+    border: 0.15vw solid #880a84;  
+    border-radius: 3px; 
+    color: #880a84; 
+    margin-bottom: 0.5vw; 
+} 
+
+.task_header {
+    padding: 0.5vw; 
+    display: block; 
+    text-transform: uppercase; 
+    font-weight: bold; 
+    cursor: pointer; 
+}
+
+.task_header::after {
+    content: '+'; 
+    float: right; 
+}
+
+.accordion_content {
+    padding: 1vw 2vw; 
+} 
+
+
+.accordion :checked + .task_header {
+    background-color: #880a84; 
+    color: #fff; 
+}
+
+.accordion :checked + .task_header::after {
+    content: '−'; 
+}
+
+.accordion :checked ~ .accordion_content {
+    display: block; 
+}
+
+/* Task 1 and 3 */
+.num1, #count_img{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.num1{
+    align-items: flex-start;
+    margin: -0.5vw 0 0 -1.5vw;
+}
+
+/* Task 2 */
+.calendar{
+    width: 25vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5vw;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.monthYear{
+    text-align: center;
+    font-weight: 600;
+    width: 150px;
+}
+
+.header button{
+    color:#880a84;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    width: 3vw;
+    height: 3vw;
+    box-shadow: 0 0 4px rgba(0,0,0,0.2);
+}
+
+.days{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+}
+
+.day{
+    text-align: center;
+    padding: 1vw;
+    color: black;
+}
+.weekend {
+    color: #f00;
+}
+.dates{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+}
+
+.date, .weekend{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 50%;
+    width: 2.5vw;
+    height: 40px;
+    transition: 0.2%;
+}
+
+.date:hover, .date.active, .weekend:hover, .weekend.active{
+    background: #ff5869;
+    color: #fff;
+}
+
+.date.inactive{
+    color: #d2d2d2;
+}
+
+.date.inactive:hover, .weekend.inactive:hover{
+    color: #fff;
+}
+
+/* Task 3 */
+#count_img{
+    align-items: center;
+}
+
+/* Task 4 */
+.blocks{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.block{
+    height: 5vw;
+    width: 5vw;
+    border: 0.1vw solid #880a84;
+    border-radius: 1vw;
+}
+
+/* Task 5 */
+.buttonNum5{
+    margin-left: 8vw;
+    box-shadow: 1vw;
+    width: 10vw;
+    height: 2vw;
+    border-radius: 0.5vw;
+    background-color: #b493cf;
+    font-size: 1.2vw;
+}
+p{
+    font-size: 1vw;
+}
+
+/* Task 6 */
+#element{
+    margin-left: 3vw;
+    height: 15vw;
+    width: 20vw;
+}
+
+/* Task 7 */
+.buttonNum7{
+    margin-left: 0.5vw;
+    box-shadow: 1vw;
+    width: 25vw;
+    height: 2vw;
+    border-radius: 0.5vw;
+    background-color: #b493cf;
+    font-size: 1.2vw;
+}
+li{
+    font-size: 1vw;
+}
+
+/* Task 8 */
+
+#img{
+    position: relative;
+    margin-left: 3vw;
+    height: 15vw;
+    width: 20vw;
+    margin-top: -6vw;
+}
+.text{
+    margin-top: 5vw;
+    margin-left: 13vw;
+    position: relative;
+    top: 3vw;
+}
+
+/* Task 9 */
+
+input[type=text], input[type=password], input[type=check_password], input[type=email], input[type=phone_number]{
+    display: block;
+    width: 12vw;
+    font-size: 1.2vw;
+    padding: 0.2vw;
+    box-sizing: border-box;
+    border: solid 0.15vw #880a84;
+    border-radius: 0.3vw;
+    background-color: transparent;
+}
+
+input[type=radio], input[type=date]{
+    display: block;
+    cursor: pointer;
+}
+
+input[type=radio]{
+    width: 1vw;
+    height: 0.7vw;
+}
+
+.man, .woman{
+    display: flex;
+    flex-direction: row;
+    font: 1vw/1.2 Arial, sans-serif;
+}
+
+#experience{
+    display: flex;
+    flex-direction: row;
+    font: 1vw/1.2 Arial, sans-serif;
+}
+input[type=date]{
+    width: 10vw;
+    height: 1.5vw;
+    background-color: transparent;
+    border-color: #880a84;
+    box-sizing: border-box;
+    border: solid 0.15vw #880a84;
+    color: grey;
+}
+
+.button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1vw;
+}
+#send, #delete{
+    border-radius: 1vw;
+    font-size: 1vw;
+    background-color: #b493cf;
+    border:  solid 0.15vw grey;
+    cursor: pointer;
+}
+
+.contact_details{
+    display: flex;
+    flex-direction: row;
+    gap: 3.4vw;
+    align-items: baseline;
+}
+
+.password{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+span{
+    color: #f00;
+}
+
+p{
+    position: relative;
+    top: -0.7vw;
+    font-size: 1vw;
+    left: 7.4vw;
+    color: #f00;
+}
+.eye_password{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: -1.5vw;
+    left: 7vw;
+    font: 1vw/1.2 Arial, sans-serif;
+}

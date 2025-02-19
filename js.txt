@@ -1,0 +1,35 @@
+function num1(){
+    let x = new Date();
+    let days = new Array(7);
+    days[1]="Понедельник";
+    days[2]="Вторник";
+    days[3]="Среда";
+    days[4]="Четверг";
+    days[5]="Пятница";
+    days[6]="Суббота";
+    days[0]="Воскресенье";
+    let year = x.getFullYear();
+    let date = x.getDate();
+    let month = x.getMonth() + 1;
+    let hour = x.getHours();
+    let minutes = x.getMinutes();
+    let seconds = x.getSeconds();
+    if (date < 10) date = "0" + date;
+    if (month < 10) month = "0" + month;
+    if (hour < 10) hour = "0" + hour;
+    if (minutes < 10) minutes = "0" + minutes;
+    if (seconds < 10) seconds = "0" + seconds;
+    document.getElementById("date").innerHTML = date + "-" + month + "-" + year + ", " + days[x.getDay()];
+    document.getElementById("clock").innerHTML = hour + "-" + minutes + "-" + seconds;
+}
+
+
+function num3(){
+    const count_img = document.querySelectorAll('img');
+    document.getElementById("count_img").innerHTML = 'Количество рисунков: ' + count_img.length;
+}
+
+function num6(){
+    let array = ["cat.jpg","dog.jpg","squirrel.jpg"]
+
+}

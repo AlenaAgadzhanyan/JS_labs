@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <script src="form.js"></script>
+    <title>JS-task</title>
+</head>
+<body>
+    <div class="main">
+        <div class="accordion">
+            <input type="checkbox" id="task1" name="tab-group">
+            <label for="task1" class="task_header">Task 1</label>
+            <section class="accordion_content">
+                <div class="num1">
+                    <span id="date"></span><span id="clock"></span>
+                </div>
+                <script>setInterval(num1,1000);</script>
+            </section>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="task2" name="tab-group">
+            <label for="task2" class="task_header">Task 2</label>
+            <section class="accordion_content">
+                <div class="calendar">
+                    <div class="header">
+                        <button id="prevBtn">&#10094;</button>
+                        <div class="monthYear" id="monthYear"></div>
+                        <button id="nextBtn">&#10095;</button>
+                    </div>
+                    <div class="days">
+                        <div class="day">Mon</div>
+                        <div class="day">Tue</div>
+                        <div class="day">Wed</div>
+                        <div class="day">Thu</div>
+                        <div class="day">Fri</div>
+                        <div class="day" style="color: red;">Sat</div>
+                        <div class="day" style="color: red;">Sun</div>
+                    </div>
+                    <div class="dates" id="dates"></div>
+                </div>
+            </section>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="task3" name="tab-group">
+            <label for="task3" class="task_header">Task 3</label>
+            <section class="accordion_content">
+                <span id="count_img"></span>
+            </section>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="task4" name="tab-group">
+            <label for="task4" class="task_header">Task 4</label>
+            <section class="accordion_content">
+                <div class="blocks">
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                </div>
+            </section>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="task5" name="tab-group">
+            <label for="task5" class="task_header">Task 5</label>
+            <section class="accordion_content">
+                <button onclick = "num5()" class = "buttonNum5"> Click me </button>
+                <div id = "addParagraph"></div>
+            </section>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="task6" name="tab-group">
+            <label for="task6" class="task_header">Task 6</label>
+            <section class="accordion_content">
+                <img id="element">
+            </section>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="task7" name="tab-group">
+            <label for="task7" class="task_header">Task 7</label>
+            <section class="accordion_content">
+                <button onclick = "see_menu()" class = "buttonNum7" style = "cursor: pointer;"> 
+                    <b> Сладости здесь (нажми на меня!) </b> 
+                </button>
+                <ul id = "menu" style = "cursor: pointer; display: none;">
+                    <li> Шоколад </li>
+                    <li> Пироженка </li>
+                    <li> Тортик </li>
+                </ul>
+            </section>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="task8" name="tab-group">
+            <label for="task8" class="task_header">Task 8</label>
+            <section class="accordion_content"> 
+                <p class = "text"> Live </p>
+                <img id = "img" src = "./images/owl.jpg">
+            </section>
+        </div>
+              
+        <div class="accordion">
+            <input type="checkbox" id="task9" name="tab-group">
+            <label for="task9" class="task_header">Task 9</label>
+            <section class="accordion_content">
+                <form id="f">
+                <fieldset>
+                    <legend> Личная информация</legend>
+                        <div class="forms">
+                            <label style="float:left; font-size: 1vw; width: 7vw;"> Фамилия <span> * </span></label>
+                            <input class = "form surname" class = "form surname" type="text" style="margin-top: 1vw;"><p></p><br>
+                            <label style="float:left; font-size: 1vw; width: 7vw; margin-top: 0.4vw;"> Имя <span> * </span></label>
+                            <input class = "form name" type="text"><p></p><br>
+                            <label style="float:left; font-size: 1vw; width: 7vw;margin-top: 0.3vw;"> Отчество </label>
+                            <input class = "lastname" type="text"><p></p><br>
+                            <label style="float:left; font-size: 1vw; width: 7vw; margin-top: 0.5vw;"> Дата рождения <span> * </span></label>
+                            <input class="form bday" id="birthday" type="date" style="margin-top: 1.2vw; font-size: 1vw;"><p></p><br>
+                            <label style="float:left; font-size: 1vw; width: 7vw; margin-top: 1vw;"> Пол </label>
+                            <label class = "man"  style="float:left;  margin-top: 1vw;"><input type="radio" name="level" checked> М </label>
+                            <label class = "woman" style="margin-top: 1vw;"><input type="radio" name="level"> Ж </label>
+                        </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend> Контактные данные </legend>
+                        <div class="forms">
+                            <label style="float:left; font-size: 1vw; width: 7vw;"> Email <span> * </span></label>
+                            <input class="form email" type="email" style="margin-top: 1vw;"><p></p><br>
+                            <label style="float:left; font-size: 1vw; width: 7vw; position: relative; top: -0.4vw;"> Номер <br> телефона <span> * </span></label>
+                            <input class="form phone" type="phone_number"><p></p>
+                        </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend> Защита от взлома </legend>
+                        <div class="forms">
+                            <label style="float:left; font-size: 1vw; width: 7vw;"> Пароль <span> * </span></label>
+                            <input class="form password" id="password1" type="password" style="margin-top: 1.5vw;"><p></p><br>
+                            <label class = "eye_password"> <input class="show_password1" type="checkbox" style = "display: block; cursor: pointer; width: 0.8vw; height: 0.8vw;"> Показать пароль</label>
+                            <label style="float:left; font-size: 1vw; width: 7vw; position: relative; top: -0.4vw;"> Подтвердите пароль <span> * </span></label>
+                            <input class="form check password" id="password2" type="password"><p></p><br>
+                            <label class = "eye_password"> <input class="show_password2" type="checkbox" style = "display: block; cursor: pointer; width: 0.8vw; height: 0.8vw;"> Показать пароль</label>
+                        </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend> Ваши навыки </legend>
+                    <div class="experience">
+                        <label id = "experience"> <input type="checkbox" style = "display: block; cursor: pointer; width: 0.8vw; height: 0.8vw;"> Знание HTML и CSS </label>
+                        <label id = "experience"> <input type="checkbox" style = "display: block; cursor: pointer; width: 0.8vw; height: 0.8vw;"> Знание Perl </label>
+                        <label id = "experience"> <input type="checkbox" style = "display: block; cursor: pointer; width: 0.8vw; height: 0.8vw;"> Знание ASP </label>
+                        <label id = "experience"> <input type="checkbox" style = "display: block; cursor: pointer; width: 0.8vw; height: 0.8vw;"> Знание Adobe Photoshop </label>
+                        <label id = "experience"> <input type="checkbox" style = "display: block; cursor: pointer; width: 0.8vw; height: 0.8vw;"> Знание Java </label>
+                        <label id = "experience"> <input type="checkbox" style = "display: block; cursor: pointer; width: 0.8vw; height: 0.8vw;"> Знание JavaScript </label>
+                        <label id = "experience"> <input type="checkbox" style = "display: block; cursor: pointer; width: 0.8vw; height: 0.8vw;"> Знание Flash </label>
+                    </div>
+                </fieldset>
+                <div class = "button">
+                    <button type="reset" id = "delete"> Очистить </button>
+                    <button class="FormButton" type="submit" id = "send"> Отправить </button>
+                </div>
+            </form>
+            </section>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="task10" name="tab-group">
+            <label for="task10" class="task_header">Task 10</label>
+            <section class="accordion_content">
+                <a href="game.html" style="display: flex; justify-content: center; cursor: pointer;"> Игра </a>
+            </section>
+        </div>
+    </div>
+    <script>
+        num1();
+        num2();
+        num3();
+        num4();
+        num6();
+        num7();
+        num8();
+        num9();
+    </script>
+</body>
+</html>
